@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let multiplicando = prompt("Por favor, informe o número da tabuada (de 2 a 9)");
+
+        document.write("<h3>Aqui está a tabuada escolhida:</h3>");
+
+        
+        if(multiplicando >=2 && multiplicando <=9){
+            multiplicando = parseInt(multiplicando);
+        
+        let n = 1
+        while(n <=10){
+            document.write(multiplicando + " x " + n + " = " + (multiplicando * n) + "<br>");
+            n++;// mesma coisa que n = n + 1
+        }
+
+        }else{
+            document.write("Número Inválido!");
+        }
+
+    </script>
+    
+</body>
+</html>
