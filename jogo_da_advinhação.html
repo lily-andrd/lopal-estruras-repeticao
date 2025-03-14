@@ -1,0 +1,38 @@
+!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo do TopDMS</title>
+</head>
+<body>
+    <script>
+        let jogar = prompt("Quer jogar? Digite 1 para SIM ou 2 para NÃO");
+ 
+        while (jogar == 1) {
+            let numeroPensado = Math.floor(Math.random() * 10 + 1);
+            let acertou = false;
+ 
+            for (let tentativa = 1; tentativa <= 3; tentativa++) {
+                let chute = prompt("Adivinhe um número de 1 a 10");
+               
+                if (chute == numeroPensado) {
+                    alert("Parabéns, você acertou!");
+                    acertou = true;
+                    break;
+                } else {
+                    alert("Você errou! Você tem mais " + (3 - tentativa) + " tentativa(s).");
+                }
+            }
+ 
+            if (!acertou) {
+                alert("Que pena! O número pensado era " + numeroPensado);
+            }
+ 
+            jogar = prompt("Quer jogar novamente? Digite 1 para SIM ou 2 para NÃO");
+        }
+ 
+        document.write("Obrigado por jogar!");
+    </script>
+</body>
+</html>
